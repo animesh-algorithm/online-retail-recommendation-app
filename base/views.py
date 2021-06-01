@@ -58,7 +58,6 @@ def home(request):
 def recommend(request, desc, qty, price, country):
     product_data = [qty, float(price), country]
     similar_products = get_similar_products(model, [product_data]).values
-    print(similar_products)
     context = {
         'description': desc,
         'quantity': qty,
